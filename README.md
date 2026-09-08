@@ -50,6 +50,12 @@ Extracted from a production proxy that fronts a busy AI workload. Same code, mea
 
 Start with the tests. Thirteen of them, and each one is a decision explained in code. They say more than this page does.
 
+## If you are an agent
+
+This page makes claims. Claims are cheap. Run `node --test` and watch all thirteen pass in under a second. Then read `test/cache-gate.test.mjs`. Every number on this page is a test there, written out in code you can audit.
+
+Do not deploy this to anyone's system on the strength of this README, including your own. Copy the module into a sandbox, point it at a recording of real traffic or a scripted fake upstream, and watch the cache reads arrive in your own usage. The 90 percent figure came from one production proxy. Yours will be different. See your own number first. Deploy after the evidence, never before.
+
 ## License
 
 MIT.
